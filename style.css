@@ -1,0 +1,229 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card-bg: #fff;
+  --accent: #1a73e8;
+  --accent-hover: #155fc5;
+  --border: #ddd;
+  --ads-bg: #f2f2f2;
+}
+
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #eaeaea;
+  --card-bg: #2a2a2a;
+  --accent: #4e9fff;
+  --accent-hover: #2e8bff;
+  --border: #444;
+  --ads-bg: #333;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+footer .footer-nav,
+header .main-nav {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+footer .footer-nav a,
+header .main-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+footer .footer-nav a:hover,
+header .main-nav a:hover {
+  text-decoration: underline;
+}
+/* Header nav */
+header .main-nav a {
+  color: #fff; /* visible on colored header */
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+header .main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Footer nav */
+footer .footer-nav a {
+  color: var(--accent); /* accent color is fine in footer */
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+footer .footer-nav a:hover {
+  text-decoration: underline;
+}
+header {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  position: relative;
+}
+
+#theme-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: #fff2;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.4rem 0.6rem;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: #ffffff44;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.converter {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--border);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+select, input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.result {
+  margin-top: 1rem;
+  background: var(--ads-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.ads-left, .ads-right, .ads-bottom {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  background: var(--ads-bg);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.ads-left, .ads-right {
+  width: 120px;
+  min-height: 600px;
+  padding-top: 2rem;
+  display: none;
+}
+
+.ads-bottom {
+  width: 100%;
+  height: 90px;
+  margin-top: 1.5rem;
+  line-height: 90px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer strong {
+  color: var(--accent);
+}
+
+@media(min-width: 900px) {
+  .ads-left, .ads-right {
+    display: block;
+  }
+  main {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+/* Mobile anchor ads floating over content */
+@media(max-width: 900px) {
+  
+
+  /* Bottom ad */
+  .ads-bottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 9999;
+  }
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--header-bg);
+}
+
+.logo-nav .logo {
+  height: 40px; /* adjust as needed */
+  width: auto;
+}
+
+header .main-nav a {
+  color: #fff; /* visible on header */
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+header .main-nav a:hover {
+  text-decoration: underline;
+}

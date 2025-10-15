@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- You can later add static pages -->
+  <url>
+    <loc>https://yourdomain.com/west-bengal-bigha-to-acre</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/bihar-bigha-to-acre</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
