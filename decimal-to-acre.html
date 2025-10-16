@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Indian Land Area Converter</title>
-  <meta name="description" content="Learn about Indian Land Area Converter – a free multilingual land conversion tool for accurate Bigha, Katha, Acre, Decimal & Cent conversions in India.">
-  <meta name="keywords" content="about land converter, indian land measurement, bigha katha converter, Aritra">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decimal to Acre Converter – Bengal, Bihar, Jharkhand, Odisha</title>
+  <meta name="description" content="Convert Decimal to Acre quickly for Bengal, Bihar, Jharkhand and Odisha. 1 Decimal = 0.01 Acre accurate and simple tool.">
+  <meta name="keywords" content="decimal to acre, decimal converter, land converter bihar, land converter odisha, 1 decimal in acre, indian land measurement">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
   <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
 {
@@ -64,50 +67,46 @@
   }
 }
 </script>
-  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <h1>About Indian Land Area Converter</h1>
+<header>
+  <div class="logo-nav">
+    <img src="logo.png" alt="Logo" class="logo">
     <nav class="main-nav">
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="index.html">Home</a> | <a href="about.html">About</a> |
+      <a href="privacy-policy.html">Privacy Policy</a> |
   <a href="terms.html">Terms & Conditions</a> 
-</nav>
+    </nav>
+  </div>
+</header>
 
-  </header>
+<main>
+  <section class="converter-section">
+    <h1>Decimal to Acre Converter – Eastern India Units</h1>
+    <p>Convert <strong>Decimal</strong> to <strong>Acre</strong> (1 Decimal = 0.01 Acre).</p>
+    <input type="number" id="decimalValue" placeholder="Enter Decimal">
+    <button onclick="convertDecimal()">Convert</button>
+    <p id="result"></p>
+  </section>
 
-  <main class="container">
-    <p>
-      Welcome to <strong>Indian Land Area Converter</strong> — a free, accurate, and easy-to-use
-      online tool built for India’s regional land measurement systems. From <strong>Bigha to Acre</strong> in West Bengal,
-      <strong>Katha to Decimal</strong> in Bihar, or <strong>Cent to Acre</strong> in Tamil Nadu — this platform supports
-      local conversions in multiple Indian languages like Hindi, Bengali, and English.
-    </p>
+  <section class="seo-section">
+    <h2>About Decimal Unit</h2>
+    <p>1 Decimal = <strong>1/100 of an Acre</strong>.  
+    Common in <strong>West Bengal, Bihar, Jharkhand, Odisha</strong>.  
+    This unit is widely used in land registry and agricultural measurement across eastern India.</p>
+  </section>
+</main>
 
-    <p>
-      The mission is simple: make property and land measurement simple for farmers, land buyers, and
-      citizens across India by combining accuracy, simplicity, and accessibility.
-    </p>
-
-    <p>
-      <strong>Made with ❤️ by Aritra</strong><br>
-      For feedback or collaboration: <a href="mailto:aritrapaul363@gmail.com">aritrapaul363@gmail.com</a>
-    </p>
-
-    <p><a href="index.html">← Back to Home</a></p>
-  </main>
-
-   <footer>
-  <nav class="footer-nav">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a> 
-  </nav>
+<footer>
   <p>Made with ❤️ By Aritra | © 2025 Indian Land Area Converter</p>
 </footer>
+
+<script>
+function convertDecimal() {
+  const val = parseFloat(document.getElementById('decimalValue').value);
+  const result = val * 0.01;
+  document.getElementById('result').textContent = `${val} Decimal = ${result.toFixed(4)} Acre`;
+}
+</script>
 </body>
 </html>

@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms & Conditions | Indian Land Area Converter</title>
-  <meta name="description" content="Terms and Conditions of using Indian Land Area Converter.">
+  <title>Bigha to Acre Converter – West Bengal, Bihar, Assam Land Area Conversion</title>
+  <meta name="description" content="Convert Bigha to Acre instantly for all Indian states including West Bengal, Bihar, Assam, Rajasthan, and Uttar Pradesh. Accurate, fast, and mobile friendly." />
+  <meta name="keywords" content="bigha to acre, bigha to acre converter, west bengal bigha, bihar bigha, assam bigha, rajasthan bigha, uttar pradesh bigha, land area converter, india" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
@@ -65,57 +68,59 @@
 }
 </script>
 </head>
-
 <body>
-  <header>
-    <h1>Terms and Conditions</h1>
+<header>
+  <div class="logo-nav">
+    <img src="logo.png" alt="Logo" class="logo" />
     <nav class="main-nav">
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="privacy-policy.html">Privacy Policy</a> |
   <a href="terms.html">Terms & Conditions</a> 
-</nav>
+    </nav>
+  </div>
+</header>
 
-  </header>
+<main>
+  <section class="converter-section">
+    <h1>Bigha to Acre Converter – Accurate for Every Indian State</h1>
+    <p>Use this calculator to convert <strong>Bigha</strong> to <strong>Acre</strong> accurately for your state.</p>
+    <input type="number" id="bighaValue" placeholder="Enter Bigha">
+    <select id="stateSelect">
+      <option value="0.3306">West Bengal</option>
+      <option value="0.625">Bihar</option>
+      <option value="0.3333">Assam</option>
+      <option value="0.625">Uttar Pradesh</option>
+      <option value="0.625">Rajasthan</option>
+    </select>
+    <button onclick="convertBigha()">Convert</button>
+    <p id="result"></p>
+  </section>
 
-  <main class="container">
-    <p><strong>Effective Date:</strong> October 2025</p>
+  <section class="seo-section">
+    <h2>State-wise Bigha Conversion Values</h2>
+    <p>Because Bigha differs by region, this tool ensures you get <strong>state-accurate</strong> conversions:</p>
+    <ul>
+      <li>1 Bigha in <strong>West Bengal</strong> = 0.3306 Acre</li>
+      <li>1 Bigha in <strong>Bihar</strong> = 0.625 Acre</li>
+      <li>1 Bigha in <strong>Assam</strong> = 0.3333 Acre</li>
+      <li>1 Bigha in <strong>Rajasthan</strong> = 0.625 Acre</li>
+      <li>1 Bigha in <strong>Uttar Pradesh</strong> = 0.625 Acre</li>
+    </ul>
+  </section>
+</main>
 
-    <h2>Use of the Website</h2>
-    <p>
-      By using <strong>Indian Land Area Converter</strong>, you agree to follow these terms and conditions.
-      This site is provided for educational and informational purposes only.
-    </p>
-
-    <h2>Accuracy Disclaimer</h2>
-    <p>
-      We strive to ensure accuracy in land unit conversions. However, local measurements may vary,
-      and users are encouraged to verify values with local authorities.
-    </p>
-
-    <h2>Limitation of Liability</h2>
-    <p>
-      The creator of this site shall not be held responsible for any inaccuracies or losses
-      arising from the use of this tool.
-    </p>
-
-    <h2>Changes</h2>
-    <p>
-      We may update these terms at any time without prior notice. Updates will be reflected on this page.
-    </p>
-
-    <p><a href="index.html">← Back to Home</a></p>
-  </main>
-
-  <footer>
-  <nav class="footer-nav">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a> 
-  </nav>
+<footer>
   <p>Made with ❤️ By Aritra | © 2025 Indian Land Area Converter</p>
 </footer>
 
+<script>
+function convertBigha() {
+  const val = parseFloat(document.getElementById('bighaValue').value);
+  const stateFactor = parseFloat(document.getElementById('stateSelect').value);
+  const result = val * stateFactor;
+  document.getElementById('result').textContent = `${val} Bigha = ${result.toFixed(4)} Acre`;
+}
+</script>
 </body>
 </html>

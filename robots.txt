@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# Block irrelevant system files
+Disallow: /node_modules/
+Disallow: /assets/temp/
+
+Sitemap: https://aritra363.github.io/landconverter/sitemap.xml

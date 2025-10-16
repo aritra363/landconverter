@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Indian Land Area Converter</title>
-  <meta name="description" content="Learn about Indian Land Area Converter – a free multilingual land conversion tool for accurate Bigha, Katha, Acre, Decimal & Cent conversions in India.">
-  <meta name="keywords" content="about land converter, indian land measurement, bigha katha converter, Aritra">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katha to Square Feet Converter – Bihar, West Bengal, Assam</title>
+  <meta name="description" content="Instantly convert Katha to Square Feet for Bihar, West Bengal, and Assam. Accurate local conversion values with mobile friendly design.">
+  <meta name="keywords" content="katha to sq ft, katha converter, bihar katha, west bengal katha, assam katha, land area converter india, katha to square feet calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
   <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
 {
@@ -64,50 +67,54 @@
   }
 }
 </script>
-  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <h1>About Indian Land Area Converter</h1>
+<header>
+  <div class="logo-nav">
+    <img src="logo.png" alt="Logo" class="logo">
     <nav class="main-nav">
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="index.html">Home</a> | <a href="about.html">About</a> |
+      <a href="privacy-policy.html">Privacy Policy</a> |
   <a href="terms.html">Terms & Conditions</a> 
-</nav>
+    </nav>
+  </div>
+</header>
 
-  </header>
+<main>
+  <section class="converter-section">
+    <h1>Katha to Square Feet Converter – State Specific Values</h1>
+    <p>Convert <strong>Katha</strong> to <strong>Square Feet</strong> easily for your region.</p>
+    <input type="number" id="kathaValue" placeholder="Enter Katha">
+    <select id="stateSelect">
+      <option value="1361">Bihar</option>
+      <option value="720">West Bengal</option>
+      <option value="2880">Assam</option>
+    </select>
+    <button onclick="convertKatha()">Convert</button>
+    <p id="result"></p>
+  </section>
 
-  <main class="container">
-    <p>
-      Welcome to <strong>Indian Land Area Converter</strong> — a free, accurate, and easy-to-use
-      online tool built for India’s regional land measurement systems. From <strong>Bigha to Acre</strong> in West Bengal,
-      <strong>Katha to Decimal</strong> in Bihar, or <strong>Cent to Acre</strong> in Tamil Nadu — this platform supports
-      local conversions in multiple Indian languages like Hindi, Bengali, and English.
-    </p>
+  <section class="seo-section">
+    <h2>State-wise Katha Conversion Values</h2>
+    <ul>
+      <li>1 Katha in <strong>Bihar</strong> = 1361 Sq. Ft.</li>
+      <li>1 Katha in <strong>West Bengal</strong> = 720 Sq. Ft.</li>
+      <li>1 Katha in <strong>Assam</strong> = 2880 Sq. Ft.</li>
+    </ul>
+  </section>
+</main>
 
-    <p>
-      The mission is simple: make property and land measurement simple for farmers, land buyers, and
-      citizens across India by combining accuracy, simplicity, and accessibility.
-    </p>
-
-    <p>
-      <strong>Made with ❤️ by Aritra</strong><br>
-      For feedback or collaboration: <a href="mailto:aritrapaul363@gmail.com">aritrapaul363@gmail.com</a>
-    </p>
-
-    <p><a href="index.html">← Back to Home</a></p>
-  </main>
-
-   <footer>
-  <nav class="footer-nav">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a> 
-  </nav>
+<footer>
   <p>Made with ❤️ By Aritra | © 2025 Indian Land Area Converter</p>
 </footer>
+
+<script>
+function convertKatha() {
+  const val = parseFloat(document.getElementById('kathaValue').value);
+  const factor = parseFloat(document.getElementById('stateSelect').value);
+  const result = val * factor;
+  document.getElementById('result').textContent = `${val} Katha = ${result.toFixed(2)} Sq. Ft.`;
+}
+</script>
 </body>
 </html>
