@@ -5,4 +5,4 @@ Allow: /
 Disallow: /node_modules/
 Disallow: /assets/temp/
 
-Sitemap: https://landareaconverter.netlify.app/sitemap.xml
+Sitemap: https://landareaconverter-seven.vercel.app/sitemap.xml
