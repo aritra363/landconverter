@@ -5,4 +5,4 @@ Allow: /
 Disallow: /node_modules/
 Disallow: /assets/temp/
 
-Sitemap: https://indianlandconverter.infinityfree.me/sitemap.xml
+Sitemap: https://indiaareaconverter.infinityfree.me/sitemap.xml
